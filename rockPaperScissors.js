@@ -47,29 +47,113 @@ function playSingleRound(playerSelection, computerSelection){
 
     if (playerSelection === "Paper") {
         if (computerSelection === "Rock") {
-            return("You win! Paper beats Rock");
+            console.log("You win! Paper beats Rock");
+            return(true); //returns true if win
         } else if (computerSelection === "Scissors") {
-            return("You lose! Paper is beaten by Scissors");
+            console.log("You lose! Paper is beaten by Scissors");
+            return(false); //returns false if lose
         } else {
-            return("It's a draw! You both picked Paper");
+            console.log("It's a draw! You both picked Paper")
+            return("draw");
         }
     } else if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
-            return("You win! Rock beats Scissors");
+            console.log("You win! Rock beats Scissors");
+            return(true);
         } else if (computerSelection === "Paper") {
-            return("You lose! Rock is beaten by Paper");
+            console.log("You lose! Rock is beaten by Paper");
+            return(false);
         } else {
-            return("It's a draw! You both picked Rock");
+            console.log("It's a draw! You both picked Rock");
+            return("draw");
         }
     } else if (playerSelection === "Scissors") {
         if (computerSelection === "Paper") {
-            return("You win! Scissors beats Paper");
+            console.log("You win! Scissors beats Paper")
+            return(true);
         } else if (computerSelection === "Rock") {
-            return("You lose! Scissors is beaten by Rock");
+            console.log("You lose! Scissors is beaten by Rock")
+            return(false);
         } else {
-            return("It's a draw! You both picked Scissors");
+            console.log("It's a draw! You both picked Scissors")
+            return("draw");
         }
     } else {
-        return("Invalid choice. Please choose either Rock, Paper, or Scissors.");
+        console.log("Invalid choice. Please choose either Rock, Paper, or Scissors.")
+        return("invalid");
+    }
+}
+
+function game() {
+    let win = 0;
+    let draw = 0;
+
+    let myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
+    let result = playSingleRound(correctSpelling(myChoice), computerPlay());
+    if(result === true) {
+        ++win;
+    } else if (result === "draw") {
+        ++draw;
+    }
+    console.log(win);
+    console.log(draw);
+    
+    myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
+    result = playSingleRound(correctSpelling(myChoice), computerPlay());
+    if(result === true) {
+        ++win;
+    } else if (result === "draw") {
+        ++draw;
+    }
+    console.log(win);
+    console.log(draw);
+
+    myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
+    result = playSingleRound(correctSpelling(myChoice), computerPlay())
+    if(result === true) {
+        ++win;
+    } else if (result === "draw") {
+        ++draw;
+    }
+    console.log(win);
+    console.log(draw);
+
+    myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
+    result = playSingleRound(correctSpelling(myChoice), computerPlay())
+    if(result === true) {
+        ++win;
+    } else if (result === "draw") {
+        ++draw;
+    }
+    console.log(win);
+    console.log(draw);
+
+    myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
+    result = playSingleRound(correctSpelling(myChoice), computerPlay())
+    if(result === true) {
+        ++win;
+    } else if (result === "draw") {
+        ++draw;
+    }
+    console.log(win);
+    console.log(draw);
+
+    /*
+        if number of wins is at least 3
+        then win
+
+        if number of wins is 2 or below
+        then lose
+
+        if the whole 5 games results in a draw
+        then draw
+    */
+
+    if (draw === 5) {
+        console.log("It's a draw! Try playing again to win");
+    } else if (win > 2){
+        console.log("Congratulations! You won the game best out of 5");
+    } else {
+        console.log("Tough luck! You lost the game. Try playing again to win")
     }
 }
