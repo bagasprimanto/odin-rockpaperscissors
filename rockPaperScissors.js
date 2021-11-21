@@ -95,8 +95,6 @@ function game() {
     } else if (result === "draw") {
         ++draw;
     }
-    console.log(win);
-    console.log(draw);
     
     myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
     result = playSingleRound(correctSpelling(myChoice), computerPlay());
@@ -105,8 +103,6 @@ function game() {
     } else if (result === "draw") {
         ++draw;
     }
-    console.log(win);
-    console.log(draw);
 
     myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
     result = playSingleRound(correctSpelling(myChoice), computerPlay())
@@ -115,8 +111,6 @@ function game() {
     } else if (result === "draw") {
         ++draw;
     }
-    console.log(win);
-    console.log(draw);
 
     myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
     result = playSingleRound(correctSpelling(myChoice), computerPlay())
@@ -125,8 +119,6 @@ function game() {
     } else if (result === "draw") {
         ++draw;
     }
-    console.log(win);
-    console.log(draw);
 
     myChoice = prompt("Please enter either Rock, Paper, or Scissors:");
     result = playSingleRound(correctSpelling(myChoice), computerPlay())
@@ -135,8 +127,6 @@ function game() {
     } else if (result === "draw") {
         ++draw;
     }
-    console.log(win);
-    console.log(draw);
 
     /*
         if number of wins is at least 3
